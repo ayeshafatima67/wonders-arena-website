@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membership | The Wonders Arena</title>
+  <meta name="description" content="Compare single and family plans, calculate your fee and sign up for The Wonders Arena.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-bar">
+      <a class="logo" href="index.html" aria-label="The Wonders Arena, home page">
+        <span class="logo-mark" aria-hidden="true">WA</span>
+        <span>The Wonders Arena</span>
+      </a>
+    </div>
+    <nav id="site-nav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Club</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="membership.html" aria-current="page">Membership</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-title">
+      <div class="container">
+        <h1>Membership</h1>
+        <p>Join alone or with your family. Each member picks their own sports.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="plans-title">
+      <div class="container">
+        <h2 id="plans-title">Compare plans</h2>
+        <div class="table-wrap" role="region" aria-label="Membership plans table" tabindex="0">
+          <table>
+            <caption>Membership fees in Pakistani rupees (indicative)</caption>
+            <thead><tr><th scope="col">Plan</th><th scope="col">3 months</th><th scope="col">6 months</th><th scope="col">12 months</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Single (1 person)</th><td class="num">Rs. 15,000</td><td class="num">Rs. 27,000</td><td class="num">Rs. 48,000</td></tr>
+              <tr><th scope="row">Family (up to 4 members)</th><td class="num">Rs. 36,000</td><td class="num">Rs. 66,000</td><td class="num">Rs. 120,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="check-list">
+          <li>Each member chooses their own sports. Two sports per member are included, extra sports cost Rs. 500 per month each.</li>
+          <li>Each extra family member (more than 4) costs Rs. 1,200 per month.</li>
+          <li>Gym: without an instructor Rs. 1,500 per month, with an instructor Rs. 3,000 per month, for each gym member.</li>
+          <li>Members of 3 or more sports get 50% off club equipment.</li>
+        </ul>
+        <p class="note">Fees shown are indicative. The club confirms the final fee when you join.</p>
+      </div>
+    </section>
+
+    <section class="section section-mint" aria-labelledby="calc-title">
+      <div class="container">
+        <h2 id="calc-title">How the fee is worked out</h2>
+        <ol>
+          <li>The plan and duration give the base fee from the table above.</li>
+          <li>Family plans include 4 members. Extra members are added per month.</li>
+          <li>Sports beyond the 2 included per member are added per month.</li>
+          <li>The gym option is added for each member who uses the gym.</li>
+        </ol>
+        <p class="small">These fees are an estimate only. No payment is taken on this website.</p>
+      </div>
+    </section>
+
+    <section class="section" id="signup" aria-labelledby="signup-title">
+      <div class="container">
+        <form id="signup-form" class="form-card" action="#" method="post">
+          <h2 id="signup-title">Sign-up form</h2>
+          <p>Fill in your details and choose the sports for each member of your family.</p>
+          <div class="form-grid cols-2">
+            <div class="field">
+              <label for="su-name">Your full name</label>
+              <input type="text" id="su-name" name="name" maxlength="50" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="su-email">Email</label>
+              <input type="email" id="su-email" name="email" maxlength="80" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="su-phone">Mobile phone <span class="hint">(for example 0300-1234567)</span></label>
+              <input type="tel" id="su-phone" name="phone" maxlength="16" autocomplete="tel" required>
+            </div>
+            <div class="field">
+              <label for="su-plan">Plan</label>
+              <select id="su-plan" name="plan" required>
+                <option value="">Choose a plan</option>
+                <option value="single">Single</option>
+                <option value="family">Family</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="su-months">Duration</label>
+              <select id="su-months" name="months" required>
+                <option value="">Choose duration</option>
+                <option value="3">3 months</option>
+                <option value="6">6 months</option>
+                <option value="12">12 months</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="su-members">Number of members <span class="hint">(1 to 6)</span></label>
+              <input type="number" id="su-members" name="members" min="1" max="6" step="1" value="1" required>
+            </div>
+          </div>
+          <fieldset class="field">
+            <legend>Sports you would like to join</legend>
+            <div class="check-grid">
+              <label class="check" for="sp-1"><input type="checkbox" id="sp-1" name="sports" value="Swimming"> Swimming</label>
+              <label class="check" for="sp-2"><input type="checkbox" id="sp-2" name="sports" value="Gym"> Gym</label>
+              <label class="check" for="sp-3"><input type="checkbox" id="sp-3" name="sports" value="Squash"> Squash</label>
+              <label class="check" for="sp-4"><input type="checkbox" id="sp-4" name="sports" value="Badminton"> Badminton</label>
+              <label class="check" for="sp-5"><input type="checkbox" id="sp-5" name="sports" value="Padel"> Padel</label>
+              <label class="check" for="sp-6"><input type="checkbox" id="sp-6" name="sports" value="Tennis"> Tennis</label>
+              <label class="check" for="sp-7"><input type="checkbox" id="sp-7" name="sports" value="Basketball"> Basketball</label>
+              <label class="check" for="sp-8"><input type="checkbox" id="sp-8" name="sports" value="Volleyball"> Volleyball</label>
+              <label class="check" for="sp-9"><input type="checkbox" id="sp-9" name="sports" value="Golf"> Golf</label>
+              <label class="check" for="sp-10"><input type="checkbox" id="sp-10" name="sports" value="Horse riding"> Horse riding</label>
+              <label class="check" for="sp-11"><input type="checkbox" id="sp-11" name="sports" value="Boxing"> Boxing</label>
+              <label class="check" for="sp-12"><input type="checkbox" id="sp-12" name="sports" value="Yoga"> Yoga</label>
+              <label class="check" for="sp-13"><input type="checkbox" id="sp-13" name="sports" value="Jogging ground"> Jogging ground</label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="su-family">Other family members and their sports <span class="hint">(optional)</span></label>
+            <textarea id="su-family" name="family" maxlength="300"></textarea>
+          </div>
+          <div class="field">
+            <label class="check" for="su-terms"><input type="checkbox" id="su-terms" name="terms"> I accept the club rules and timings.</label>
+            
+          </div>
+          <button type="submit" class="btn btn-primary">Sign up</button>
+          
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>The Wonders Arena</h2>
+          <address>
+            F-8 Markaz, Islamabad, Pakistan<br>
+            Phone: <a href="tel:+92510000000">+92 51 000 0000</a><br>
+            Email: <a href="mailto:info@wondersarena.example">info@wondersarena.example</a>
+          </address>
+        </div>
+        <div>
+          <h2>Opening hours</h2>
+          <p>Every day: 5:00 AM &ndash; 11:00 PM<br>Individual sport timings are on the <a href="facilities.html">Facilities</a> page.</p>
+        </div>
+        <div>
+          <h2>Quick links</h2>
+          <ul>
+            <li><a href="membership.html">Join the club</a></li>
+            <li><a href="events.html">Events and competitions</a></li>
+            <li><a href="help.html">Help and contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 The Wonders Arena website project &ndash; CSC-114 Introduction to ICT, Bahria University Islamabad &ndash; Glitch Squad.</p>
+    </div>
+  </footer>
+</body>
+</html>

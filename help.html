@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Help | The Wonders Arena</title>
+  <meta name="description" content="Frequently asked questions and contact form for The Wonders Arena.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-bar">
+      <a class="logo" href="index.html" aria-label="The Wonders Arena, home page">
+        <span class="logo-mark" aria-hidden="true">WA</span>
+        <span>The Wonders Arena</span>
+      </a>
+    </div>
+    <nav id="site-nav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Club</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="help.html" aria-current="page">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-title">
+      <div class="container">
+        <h1>Help</h1>
+        <p>Answers to common questions and a way to contact us.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title">Frequently asked questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Q1. How do I join the club?</summary>
+            <p>Open the Membership page, choose a plan and fill in the sign-up form. Club staff will contact you to complete your membership at the club.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Q2. What are the timings?</summary>
+            <p>Each sport has its own timings. Open the Facilities page to see all timings, including separate women and men slots for swimming, the gym and boxing.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Q3. Is there a family plan?</summary>
+            <p>Yes. The family plan covers up to 4 members and each member can choose different sports. Extra members can be added.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Q4. Are there coaches?</summary>
+            <p>Yes. Every sport has coaches for kids and adults.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Q5. Can I book a court online?</summary>
+            <p>Not on this website. Courts are booked at the club.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Q6. Can I buy equipment online?</summary>
+            <p>No. Equipment such as swim costumes, racquets, balls and golf sets is bought at the club. Members of 3 or more sports get 50% off.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Q7. Do I need an account to look around?</summary>
+            <p>No. Choose Continue as Guest to browse every information page without logging in.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Q8. How can I contact the club?</summary>
+            <p>Use the contact form below, call the club or visit us in F-8 Markaz, Islamabad.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-mint" id="contact" aria-labelledby="contact-title">
+      <div class="container two-col align-start">
+        <form id="contact-form" class="form-card" action="#" method="post">
+          <h2 id="contact-title">Contact us</h2>
+          <div class="field">
+            <label for="ct-name">Your name</label>
+            <input type="text" id="ct-name" name="name" maxlength="50" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="ct-email">Email</label>
+            <input type="email" id="ct-email" name="email" maxlength="80" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="ct-subject">Subject</label>
+            <select id="ct-subject" name="subject" required>
+              <option value="">Choose a subject</option>
+              <option>Membership</option>
+              <option>Timings</option>
+              <option>Events and competitions</option>
+              <option>Equipment</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="ct-message">Message <span class="hint">(10 to 500 characters)</span></label>
+            <textarea id="ct-message" name="message" minlength="10" maxlength="500" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+          
+        </form>
+        <div>
+          <h3>Visit or call</h3>
+          <address>
+            <strong>The Wonders Arena</strong><br>
+            F-8 Markaz, Islamabad, Pakistan<br>
+            Phone: <a href="tel:+92510000000">+92 51 000 0000</a><br>
+            Email: <a href="mailto:info@wondersarena.example">info@wondersarena.example</a>
+          </address>
+          <p>Open every day from 5:00 AM to 11:00 PM.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>The Wonders Arena</h2>
+          <address>
+            F-8 Markaz, Islamabad, Pakistan<br>
+            Phone: <a href="tel:+92510000000">+92 51 000 0000</a><br>
+            Email: <a href="mailto:info@wondersarena.example">info@wondersarena.example</a>
+          </address>
+        </div>
+        <div>
+          <h2>Opening hours</h2>
+          <p>Every day: 5:00 AM &ndash; 11:00 PM<br>Individual sport timings are on the <a href="facilities.html">Facilities</a> page.</p>
+        </div>
+        <div>
+          <h2>Quick links</h2>
+          <ul>
+            <li><a href="membership.html">Join the club</a></li>
+            <li><a href="events.html">Events and competitions</a></li>
+            <li><a href="help.html">Help and contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 The Wonders Arena website project &ndash; CSC-114 Introduction to ICT, Bahria University Islamabad &ndash; Glitch Squad.</p>
+    </div>
+  </footer>
+</body>
+</html>

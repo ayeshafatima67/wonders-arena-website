@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login / Sign up | The Wonders Arena</title>
+  <meta name="description" content="Member login and account sign-up for The Wonders Arena website (demonstration).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-bar">
+      <a class="logo" href="index.html" aria-label="The Wonders Arena, home page">
+        <span class="logo-mark" aria-hidden="true">WA</span>
+        <span>The Wonders Arena</span>
+      </a>
+    </div>
+    <nav id="site-nav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Club</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="login.html" aria-current="page">Login</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-title">
+      <div class="container">
+        <h1>Login / Sign up</h1>
+        <p>Members can log in. Guests can browse the whole site without logging in.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+
+        <form id="login-form" class="form-card" action="#" method="post">
+          <h2>Member login</h2>
+          <div class="field">
+            <label for="lg-email">Email</label>
+            <input type="email" id="lg-email" name="email" maxlength="80" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="lg-password">Password</label>
+            <input type="password" id="lg-password" name="password" maxlength="64" autocomplete="current-password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <form id="register-account-form" class="form-card" action="#" method="post">
+          <h2>Create an account</h2>
+          <div class="field">
+            <label for="ac-name">Full name</label>
+            <input type="text" id="ac-name" name="name" maxlength="50" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="ac-email">Email</label>
+            <input type="email" id="ac-email" name="email" maxlength="80" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="ac-password">Password <span class="hint">(8&ndash;64 characters, a letter and a number)</span></label>
+            <input type="password" id="ac-password" name="password" maxlength="64" autocomplete="new-password" required>
+          </div>
+          <div class="field">
+            <label for="ac-confirm">Repeat password</label>
+            <input type="password" id="ac-confirm" name="confirm" maxlength="64" autocomplete="new-password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign up</button>
+        </form>
+
+        <p class="note">This is a demonstration page. It does not connect to a real database, and no password is stored.</p>
+        <p><a class="btn btn-outline" href="about.html">Continue as Guest</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>The Wonders Arena</h2>
+          <address>
+            F-8 Markaz, Islamabad, Pakistan<br>
+            Phone: <a href="tel:+92510000000">+92 51 000 0000</a><br>
+            Email: <a href="mailto:info@wondersarena.example">info@wondersarena.example</a>
+          </address>
+        </div>
+        <div>
+          <h2>Opening hours</h2>
+          <p>Every day: 5:00 AM &ndash; 11:00 PM<br>Individual sport timings are on the <a href="facilities.html">Facilities</a> page.</p>
+        </div>
+        <div>
+          <h2>Quick links</h2>
+          <ul>
+            <li><a href="membership.html">Join the club</a></li>
+            <li><a href="events.html">Events and competitions</a></li>
+            <li><a href="help.html">Help and contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 The Wonders Arena website project &ndash; CSC-114 Introduction to ICT, Bahria University Islamabad &ndash; Glitch Squad.</p>
+    </div>
+  </footer>
+</body>
+</html>
