@@ -1,0 +1,230 @@
+/* =====================================================================
+   The Wonders Arena - main style sheet (one external file for all pages)
+   CSC-114 ICT Website Project, Glitch Squad
+   Sections: 1 Variables  2 Base  3 Layout  4 Header and navigation
+             5 Buttons  6 Hero  7 Cards and grids  8 Tables  9 Forms
+             10 Components (details lists, notice board, events)  11 Footer
+             12 Media queries (mobile first)
+   ===================================================================== */
+
+/* ---------- 1. Variables (colour palette and fonts from the report) ---------- */
+:root {
+  --teal-dark: #0B5F63;
+  --teal: #14A3A3;
+  --coral: #F7A092;
+  --coral-soft: #FFEEEA;
+  --coral-text: #B5493B;
+  --mint: #DDF3F1;
+  --ink: #063B3E;
+  --text: #1F3A3D;
+  --gray: #5F7276;
+  --white: #FFFFFF;
+  --error: #B3261E;
+  --ok: #1B6B3A;
+  --radius: 14px;
+  --shadow: 0 4px 16px rgba(6, 59, 62, 0.12);
+  --font-head: "Montserrat", Arial, Helvetica, sans-serif;
+  --font-body: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+/* ---------- 2. Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--white);
+}
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3, h4 { font-family: var(--font-head); color: var(--teal-dark); line-height: 1.25; margin: 0 0 0.6rem; }
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.15rem; }
+p { margin: 0 0 1rem; }
+a { color: var(--teal-dark); text-underline-offset: 3px; }
+a:hover { color: var(--coral-text); }
+:focus-visible { outline: 3px solid var(--coral-text); outline-offset: 2px; }
+.skip-link {
+  position: absolute; left: -999px; top: 0; z-index: 100;
+  background: var(--ink); color: var(--white); padding: 0.6rem 1rem;
+}
+.skip-link:focus { left: 0; }
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* ---------- 3. Layout ---------- */
+.container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 1rem; }
+.section { padding: 2.2rem 0; }
+.section-mint { background: var(--mint); }
+.section-coral { background: var(--coral-soft); }
+.page-title { background: linear-gradient(135deg, var(--teal-dark), var(--teal)); color: var(--white); padding: 2rem 0 1.6rem; }
+.page-title h1 { color: var(--white); margin-bottom: 0.3rem; }
+.page-title p { margin: 0; max-width: 60ch; }
+.lead { font-size: 1.1rem; max-width: 65ch; }
+.two-col { display: grid; gap: 1.5rem; }
+.align-start { align-items: start; }
+.narrow { max-width: 520px; }
+.no-margin { margin: 0; }
+.note { background: var(--coral-soft); border-left: 5px solid var(--coral); padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.95rem; }
+.small { font-size: 0.9rem; color: var(--gray); }
+
+/* ---------- 4. Header and navigation ---------- */
+.site-header { background: var(--teal-dark); color: var(--white); position: sticky; top: 0; z-index: 50; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); }
+.header-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.6rem 1rem; max-width: 1120px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 0.6rem; color: var(--white); text-decoration: none; font-family: var(--font-head); font-weight: 800; font-size: 1.05rem; }
+.logo:hover { color: var(--coral); }
+.logo-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--coral); color: var(--ink); font-size: 0.9rem; }
+.main-nav { background: var(--teal-dark); }
+.main-nav ul { list-style: none; margin: 0 auto; padding: 0 0.6rem 0.7rem; display: flex; flex-wrap: wrap; gap: 0.2rem; max-width: 1120px; }
+.main-nav a { display: block; color: var(--white); text-decoration: none; padding: 0.5rem 0.7rem; border-radius: 8px; font-weight: 600; font-size: 0.92rem; }
+.main-nav a:hover { background: rgba(255, 255, 255, 0.15); color: var(--white); }
+.main-nav a[aria-current="page"] { background: var(--coral); color: var(--ink); }
+/* ---------- 5. Buttons ---------- */
+.btn {
+  display: inline-block; border: 2px solid transparent; border-radius: 999px;
+  padding: 0.7rem 1.4rem; font: inherit; font-weight: 700; text-align: center;
+  text-decoration: none; cursor: pointer; min-height: 44px;
+}
+.btn-primary { background: var(--coral); color: var(--ink); }
+.btn-primary:hover { background: #f58b79; color: var(--ink); }
+.btn-light { background: var(--white); color: var(--teal-dark); }
+.btn-light:hover { background: var(--mint); color: var(--teal-dark); }
+.btn-outline { background: transparent; border-color: var(--teal-dark); color: var(--teal-dark); }
+.btn-outline:hover { background: var(--mint); color: var(--teal-dark); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+
+/* ---------- 6. Hero (Home page) ---------- */
+.hero { position: relative; background: var(--ink); color: var(--white); }
+.hero-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 72% 46%; }
+.hero-content { padding: 1.5rem 1rem 2rem; max-width: 1120px; margin: 0 auto; }
+.hero h1 { color: var(--white); font-size: 2.3rem; margin-bottom: 0.4rem; }
+.tagline { font-family: var(--font-head); font-weight: 600; font-size: 1.1rem; letter-spacing: 0.04em; color: var(--coral); margin-bottom: 1.2rem; }
+.hero-text { max-width: 48ch; margin-bottom: 1.4rem; }
+
+/* ---------- 7. Cards and grids ---------- */
+.card-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.card { background: var(--white); border: 1px solid var(--teal); border-radius: var(--radius); padding: 1.1rem; box-shadow: var(--shadow); }
+.section-mint .card, .section-coral .card { border-color: transparent; }
+.card h3 { margin-top: 0; }
+.card-link { display: block; text-decoration: none; color: var(--text); height: 100%; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.card-link:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(6, 59, 62, 0.2); color: var(--text); }
+.card-link h3 { color: var(--teal-dark); }
+.icon { font-size: 1.9rem; display: block; margin-bottom: 0.3rem; }
+.stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; text-align: center; }
+.stat { background: var(--white); border-radius: var(--radius); padding: 0.9rem; border: 1px solid var(--teal); }
+.stat strong { display: block; font-family: var(--font-head); font-size: 1.7rem; color: var(--teal-dark); }
+.figure-img { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.figure-img img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+figcaption { font-size: 0.85rem; color: var(--gray); padding: 0.4rem 0.2rem; }
+.check-list { list-style: none; padding: 0; margin: 0 0 1rem; }
+.check-list li { padding-left: 1.7rem; position: relative; margin-bottom: 0.4rem; }
+.check-list li::before { content: "\2713"; position: absolute; left: 0; color: var(--teal); font-weight: 800; }
+address { font-style: normal; }
+
+/* ---------- 8. Tables ---------- */
+.table-wrap { overflow-x: auto; margin-bottom: 1rem; border-radius: 10px; border: 1px solid var(--teal); }
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: var(--white); }
+caption { text-align: left; font-family: var(--font-head); font-weight: 700; color: var(--teal-dark); padding: 0.6rem 0.2rem; caption-side: top; }
+th, td { padding: 0.6rem 0.7rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--mint); }
+thead th { background: var(--teal-dark); color: var(--white); white-space: nowrap; }
+tbody tr:nth-child(even) { background: var(--mint); }
+tbody th { font-weight: 700; color: var(--teal-dark); }
+td.num { white-space: nowrap; }
+
+/* ---------- 9. Forms ---------- */
+.form-card { background: var(--white); border: 1px solid var(--teal); border-radius: var(--radius); padding: 1.2rem; box-shadow: var(--shadow); }
+.field { margin-bottom: 1rem; }
+label, legend { display: block; font-weight: 700; color: var(--ink); margin-bottom: 0.25rem; }
+.hint { font-weight: 400; color: var(--gray); font-size: 0.85rem; }
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="number"], select, textarea {
+  width: 100%; padding: 0.65rem 0.75rem; font: inherit; color: var(--text);
+  border: 2px solid var(--gray); border-radius: 10px; background: var(--white); min-height: 44px;
+}
+textarea { min-height: 130px; resize: vertical; }
+input:focus, select:focus, textarea:focus { border-color: var(--teal-dark); outline: 3px solid var(--mint); }
+input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: var(--error); background: #FFF6F5; }
+.error { color: var(--error); font-size: 0.9rem; font-weight: 600; margin: 0.3rem 0 0; min-height: 0; }
+fieldset { border: 1px solid var(--teal); border-radius: 10px; margin: 0 0 1rem; padding: 0.8rem 1rem; }
+fieldset legend { padding: 0 0.4rem; }
+.check { display: flex; align-items: center; gap: 0.5rem; font-weight: 400; margin-bottom: 0.3rem; }
+.check input { width: 20px; height: 20px; accent-color: var(--teal-dark); flex: none; }
+.sport-checks { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.2rem 0.8rem; }
+.form-grid { display: grid; gap: 0 1rem; }
+.result { background: var(--mint); border: 2px solid var(--teal-dark); border-radius: var(--radius); padding: 1rem; margin-top: 1rem; }
+.result .total { font-family: var(--font-head); font-size: 1.6rem; font-weight: 800; color: var(--teal-dark); margin: 0.4rem 0; }
+.result dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 0.2rem 1rem; }
+.result dt { font-weight: 600; }
+.result dd { margin: 0; text-align: right; }
+.success { background: #E6F5EC; border: 2px solid var(--ok); color: #0F4D28; border-radius: var(--radius); padding: 1rem; margin-top: 1rem; font-weight: 600; }
+
+/* ---------- 10. Components ---------- */
+.facility-list { display: grid; gap: 0.6rem; margin-bottom: 1rem; }
+.facility, .faq-item { background: var(--white); border: 2px solid var(--teal); border-radius: 12px; overflow: hidden; }
+.facility summary, .faq-item summary {
+  display: flex; align-items: center; gap: 0.6rem; cursor: pointer; list-style: none;
+  background: var(--mint); padding: 0.8rem 1rem; font-weight: 700; color: var(--ink); min-height: 48px;
+}
+.facility summary::-webkit-details-marker, .faq-item summary::-webkit-details-marker { display: none; }
+.facility summary::after, .faq-item summary::after { content: "+"; margin-left: auto; font-size: 1.4rem; color: var(--coral-text); }
+.facility[open] summary::after, .faq-item[open] summary::after { content: "\2212"; }
+.facility summary:hover, .faq-item summary:hover { background: var(--coral-soft); }
+.facility .icon { font-size: 1.4rem; }
+.facility-body { padding: 0.9rem 1rem; }
+.faq-list { max-width: 800px; }
+.faq-item { margin-bottom: 0.7rem; }
+.faq-item p { margin: 0; padding: 0.9rem 1rem; }
+.check-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 0.2rem 1rem; }
+.product { display: flex; flex-direction: column; gap: 0.2rem; text-align: center; }
+.price { font-weight: 800; color: var(--teal-dark); font-size: 1.1rem; }
+.price s { color: var(--gray); font-weight: 400; margin-right: 0.4rem; }
+.badge { display: inline-block; background: var(--coral-soft); color: var(--coral-text); border-radius: 999px; padding: 0.1rem 0.7rem; font-size: 0.8rem; font-weight: 700; }
+.notice-board { background: var(--ink); color: var(--white); border-radius: var(--radius); padding: 1rem 1.2rem; display: flex; gap: 0.8rem; align-items: center; }
+.notice-board strong { color: var(--coral); }
+.event-card { display: flex; flex-direction: column; gap: 0.5rem; }
+.event-date { display: inline-flex; flex-direction: column; align-items: center; background: var(--coral); color: var(--ink); border-radius: 10px; padding: 0.3rem 0.8rem; font-weight: 800; align-self: flex-start; }
+.event-date span { font-size: 0.8rem; text-transform: uppercase; }
+.event-meta { color: var(--gray); font-size: 0.9rem; margin: 0; }
+
+/* ---------- 11. Footer ---------- */
+.site-footer { background: var(--teal-dark); color: var(--white); padding: 2rem 0 1rem; margin-top: 2rem; }
+.site-footer h2 { color: var(--coral); font-size: 1.05rem; }
+.site-footer a { color: var(--white); }
+.site-footer a:hover { color: var(--coral); }
+.footer-grid { display: grid; gap: 1.2rem; }
+.footer-grid ul { list-style: none; padding: 0; margin: 0; }
+.footer-grid li { margin-bottom: 0.3rem; }
+.copyright { border-top: 1px solid rgba(255, 255, 255, 0.3); margin-top: 1.5rem; padding-top: 0.8rem; font-size: 0.85rem; }
+
+/* ---------- 12. Media queries (mobile first) ---------- */
+@media (min-width: 700px) {
+  h1 { font-size: 2.3rem; }
+  h2 { font-size: 1.7rem; }
+  .two-col { grid-template-columns: 1fr 1fr; align-items: center; }
+  .stats { grid-template-columns: repeat(4, 1fr); }
+  .form-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1.3fr 1fr 1fr; }
+}
+@media (min-width: 900px) {
+  .main-nav { background: transparent; }
+  .site-header { display: flex; align-items: center; justify-content: space-between; padding: 0 max(1rem, calc((100% - 1120px) / 2)); }
+  .header-bar { padding: 0.6rem 0; margin: 0; max-width: none; }
+  .main-nav ul { display: flex; padding: 0; margin: 0; gap: 0.2rem; max-width: none; }
+  .main-nav a { padding: 0.5rem 0.75rem; font-size: 0.95rem; }
+  /* Hero: text on the left, the sign on the building stays visible on the right */
+  .hero { min-height: 560px; display: flex; align-items: center; }
+  .hero-media { position: absolute; inset: 0; }
+  .hero-media img { height: 100%; aspect-ratio: auto; object-position: 50% 44%; }
+  .hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(6, 59, 62, 0.92) 0%, rgba(6, 59, 62, 0.72) 38%, rgba(6, 59, 62, 0) 62%); }
+  .hero-content { position: relative; z-index: 2; width: 100%; padding: 3rem 1rem; }
+  .hero h1 { font-size: 3.2rem; }
+  .hero-text, .hero h1, .tagline, .hero .btn-row { max-width: 460px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card-link { transition: none; }
+}
